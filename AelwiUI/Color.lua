@@ -131,12 +131,12 @@ function AelwiUI:Color()
 		end
 
 		if gossip == GossipFrameGreetingPanel or gossip == QuestFrameGreetingPanel or gossip == ArenaRegistrarFrame or gossip == ArenaRegistrarGreetingFrame then
-		    gossip.Corner = gossip:CreateTexture(nil, 'OVERLAY', nil, 7)
-		    gossip.Corner:SetTexture[[Interface\QuestFrame\UI-Quest-BotLeftPatch]]
-		    gossip.Corner:SetWidth(132)
-		    gossip.Corner:SetHeight(64)
-		    gossip.Corner:SetPoint('BOTTOMLEFT', gossip, 21, 68)
-		    gossip.Corner:SetVertexColor(unpack(AelwiUI.textureColor))
+			gossip.Corner = gossip:CreateTexture(nil, 'OVERLAY', nil, 7)
+			gossip.Corner:SetTexture[[Interface\QuestFrame\UI-Quest-BotLeftPatch]]
+			gossip.Corner:SetWidth(132)
+			gossip.Corner:SetHeight(64)
+			gossip.Corner:SetPoint('BOTTOMLEFT', gossip, 21, 68)
+			gossip.Corner:SetVertexColor(unpack(AelwiUI.textureColor))
 		end
 	end
 
@@ -307,11 +307,11 @@ function AelwiUI:Color()
 	end
 	
 	SpellBookFrame.Material = SpellBookFrame:CreateTexture(nil, 'OVERLAY', nil, 7)
-    SpellBookFrame.Material:SetTexture[[Interface\AddOns\AelwiUI\textures\QuestBG.tga]]
-    SpellBookFrame.Material:SetWidth(525)
-    SpellBookFrame.Material:SetHeight(535)
-    SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 28, -74)
-    SpellBookFrame.Material:SetVertexColor(.7, .7, .7)
+	SpellBookFrame.Material:SetTexture[[Interface\AddOns\AelwiUI\textures\QuestBG.tga]]
+	SpellBookFrame.Material:SetWidth(525)
+	SpellBookFrame.Material:SetHeight(535)
+	SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 28, -74)
+	SpellBookFrame.Material:SetVertexColor(.7, .7, .7)
 	
 	for _,v in pairs({FriendsFrame:GetRegions()}) do
 		if v:GetObjectType() == 'Texture' then
@@ -357,11 +357,11 @@ function AelwiUI:Color()
 	end
 	
 	ItemTextFrame.Material = ItemTextFrame:CreateTexture(nil, 'OVERLAY', nil, 7)
-    ItemTextFrame.Material:SetTexture[[Interface\AddOns\AelwiUI\textures\QuestBG.tga]]
-    ItemTextFrame.Material:SetHeight(530)
+	ItemTextFrame.Material:SetTexture[[Interface\AddOns\AelwiUI\textures\QuestBG.tga]]
+	ItemTextFrame.Material:SetHeight(530)
 	ItemTextFrame.Material:SetWidth(506)
-    ItemTextFrame.Material:SetPoint('TOPLEFT', ItemTextFrame, 24, -82)
-    ItemTextFrame.Material:SetVertexColor(.9, .9, .9)
+	ItemTextFrame.Material:SetPoint('TOPLEFT', ItemTextFrame, 24, -82)
+	ItemTextFrame.Material:SetVertexColor(.9, .9, .9)
 	
 	for _,v in pairs({HelpFrame:GetRegions()}) do
 		if v:GetObjectType() == 'Texture' then
@@ -373,7 +373,7 @@ function AelwiUI:Color()
 		if v:GetObjectType() == 'Texture' and v ~= PetStableFramePortrait then
 			v:SetVertexColor(unpack(AelwiUI.textureColor))
 		end	
-    end
+	end
 	
 	for _,v in pairs({WorldStateScoreFrame:GetRegions()}) do
 		if v:GetObjectType() == 'Texture' then
@@ -574,7 +574,7 @@ function AelwiUI:Color()
 
 			hooksecurefunc('CombatText_UpdateDisplayedMessages',function(self)
 				COMBAT_TEXT_LOCATIONS.startX = -300
-    			COMBAT_TEXT_LOCATIONS.endX = -300
+				COMBAT_TEXT_LOCATIONS.endX = -300
 
 				COMBAT_TEXT_LOCATIONS.startY = 600
 				COMBAT_TEXT_LOCATIONS.endY = 800
