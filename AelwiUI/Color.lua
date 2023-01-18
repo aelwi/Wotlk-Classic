@@ -182,8 +182,13 @@ function AelwiUI:Color()
 		end
 	end
 	
-	
 	for _,v in pairs({TokenFrame:GetRegions()}) do
+		if v:GetObjectType() == 'Texture' then
+			v:SetVertexColor(unpack(AelwiUI.textureColor))
+		end
+	end
+
+	for _,v in pairs({BackpackTokenFrame:GetRegions()}) do
 		if v:GetObjectType() == 'Texture' then
 			v:SetVertexColor(unpack(AelwiUI.textureColor))
 		end
