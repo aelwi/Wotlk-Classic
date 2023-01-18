@@ -107,7 +107,7 @@ function AelwiUI:Color()
         QuestFrameDetailPanel,
         QuestFrameProgressPanel,
         QuestFrameRewardPanel,
-        GossipFrameGreetingPanel,
+        GossipFrame.GreetingPanel,
 		QuestLogFrame,
 		PetitionFrame,
 		QuestLogDetailFrame
