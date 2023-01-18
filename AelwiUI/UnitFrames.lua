@@ -2,17 +2,6 @@
 local AelwiUI = ns.AelwiUI
 
 function AelwiUI:UnitFrames()
-	for _,v in pairs({
-		TargetFrameToT,
-		FocusFrameToT,
-	}) do
-		v.manabar:HookScript('OnShow',function(self)
-			v.manabar:SetValue(self.currValue)
-			print(self.currValue)
-		end)
-	end
-
-
 	local posPerFrame = {
 		['PetFrame']					= {'CENTER', PlayerFrame, 'CENTER',  -60,  55},	
 		['PlayerFrame']					= {'CENTER', UIParent, 	  'CENTER', -400, 400},
