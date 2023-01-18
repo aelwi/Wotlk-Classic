@@ -103,26 +103,26 @@ function AelwiUI:Color()
 	for _, gossip in pairs({
 		ArenaRegistrarFrame,
 		ArenaRegistrarGreetingFrame,
-        QuestFrameGreetingPanel,
-        QuestFrameDetailPanel,
-        QuestFrameProgressPanel,
-        QuestFrameRewardPanel,
-        GossipFrame.GreetingPanel,
+		QuestFrameGreetingPanel,
+		QuestFrameDetailPanel,
+		QuestFrameProgressPanel,
+		QuestFrameRewardPanel,
+		GossipFrame.GreetingPanel,
 		QuestLogFrame,
 		PetitionFrame,
 		QuestLogDetailFrame
 	}) do
-        for _, v in pairs({gossip:GetRegions()}) do 
+		for _, v in pairs({gossip:GetRegions()}) do 
 			if v:GetObjectType() == 'Texture' then
 				v:SetVertexColor(unpack(AelwiUI.textureColor))
 			end
 		end
 	
-        gossip.Material = gossip:CreateTexture(nil, 'OVERLAY', nil, 7)
-        gossip.Material:SetTexture[[Interface\AddOns\AelwiUI\textures\QuestBG.tga]]
-        gossip.Material:SetWidth(506)
-        gossip.Material:SetHeight(506)
-        gossip.Material:SetVertexColor(.7, .7, .7)
+		gossip.Material = gossip:CreateTexture(nil, 'OVERLAY', nil, 7)
+		gossip.Material:SetTexture[[Interface\AddOns\AelwiUI\textures\QuestBG.tga]]
+		gossip.Material:SetWidth(506)
+		gossip.Material:SetHeight(506)
+		gossip.Material:SetVertexColor(.7, .7, .7)
 		
 		if gossip == QuestLogFrame then
 			gossip.Material:SetPoint('TOPRIGHT', gossip, 175, -78)
@@ -130,14 +130,14 @@ function AelwiUI:Color()
 			gossip.Material:SetPoint('TOPLEFT', gossip, 24, -82)
 		end
 
-        if gossip == GossipFrameGreetingPanel or gossip == QuestFrameGreetingPanel or gossip == ArenaRegistrarFrame or gossip == ArenaRegistrarGreetingFrame then
-            gossip.Corner = gossip:CreateTexture(nil, 'OVERLAY', nil, 7)
-            gossip.Corner:SetTexture[[Interface\QuestFrame\UI-Quest-BotLeftPatch]]
-            gossip.Corner:SetWidth(132)
-            gossip.Corner:SetHeight(64)
-            gossip.Corner:SetPoint('BOTTOMLEFT', gossip, 21, 68)
-            gossip.Corner:SetVertexColor(unpack(AelwiUI.textureColor))
-        end
+		if gossip == GossipFrameGreetingPanel or gossip == QuestFrameGreetingPanel or gossip == ArenaRegistrarFrame or gossip == ArenaRegistrarGreetingFrame then
+		    gossip.Corner = gossip:CreateTexture(nil, 'OVERLAY', nil, 7)
+		    gossip.Corner:SetTexture[[Interface\QuestFrame\UI-Quest-BotLeftPatch]]
+		    gossip.Corner:SetWidth(132)
+		    gossip.Corner:SetHeight(64)
+		    gossip.Corner:SetPoint('BOTTOMLEFT', gossip, 21, 68)
+		    gossip.Corner:SetVertexColor(unpack(AelwiUI.textureColor))
+		end
 	end
 
 	for _,v in pairs({OverrideActionBar:GetRegions()}) do
