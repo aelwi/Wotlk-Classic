@@ -26,8 +26,9 @@ function AelwiUI:JunkSell()
 			if GetContainerNumSlots(bag) then
 				for slot=1,GetContainerNumSlots(bag) do
 					if IsJunk(bag, slot) then
-						local count = select(2, GetContainerItemInfo(bag, slot))
-						
+						local tbl = GetContainerItemInfo(bag, slot)
+						local count = tbl.stackCount
+
 						DEFAULT_CHAT_FRAME:AddMessage('|cff4fff4fSelling junk|r: ' .. (count > 1 and count .. 'x' or '') .. GetContainerItemLink(bag,slot))
 						
 						PickupContainerItem(bag,slot)
